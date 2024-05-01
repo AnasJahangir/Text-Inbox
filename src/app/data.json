@@ -1,0 +1,269 @@
+{
+ 
+  "english": {
+    "heading": {
+      "name": "Text Inbox"
+    },
+    "navLinks": [
+      {
+        "firstlink": "Home",
+        "href": "/"
+      },
+      {
+        "firstlink": "Pricing",
+        "href": "/Pricing"
+      },
+      {
+        "firstlink": "Contact",
+        "href": "/Contact"
+      }
+    ],
+    "navbutton": {
+      "button": "Try It Now"
+    },
+    "hero": {
+      "heroheading1": "Craft Personalized",
+      "heroheading2": "Emails That Reflect Your Unique Style",
+      "herodescription": "TextInbox, your personalized AI email assistant, to ensure seamless email communication!",
+      "herobutton": "Get Start For Free"
+    },
+    "section2": {
+      "topheading": "HOW IT WORKS",
+      "mainheading": "How To Write An Email In Three Easy Steps",
+      "firstcardheading": "Speed",
+      "firstcarddescription": "Generate Emails Quickly With Just One/Two Hints.",
+      "secondcardheading": "Adaptation",
+      "secondcarddescription": "Our Solution earns Your Writing Style, And Generate Same Style Emails.",
+      "thirdcardheading": "Privacy",
+      "thirdcarddescription": "Users’ Privacy Is Our First Priority, Our Solution o Not Use Or Store User Data, We Only Use Last Email To Generate A Reply.",
+      "section2button": "Get Start For Free"
+    },
+    "section3": {
+      "mainheading": "Write Unique And Professional Email In Minutes",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "button": "Install For Free"
+    },
+    "section4": {
+      "mainheading": "Email Chrome Will Craft Your Email Response",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "firstcardfirstline": "Dear Meziane, ",
+      "firstcardfirstpara": "I'm writing to express",
+      "firstCardFirstParaTextHighlighted": "my interest in the UI",
+      "firstCardFirstParaTextRemaining": "designer role at Tech Sol. I have a Btech in Computer Science and I would love to work with you.",
+      "firstCardSecondPara": "I can't tell you how much I ",
+      "firstCardSecondParaTextHighlighted1": "appreciate your time ",
+      "firstCardSecondParaTextRemaining1": "and consideration, but I do want to provide a quick overview of my skills: ",
+      "firstCardSecondParaTextHighlighted2": "I am an expert in web design ",
+      "firstCardSecondParaTextRemaining2": "and I have experience working on projects that involve user-centered design, user experience, information architecture, and visual design.",
+      "firstCardThirdParaHighlighted": "Thank you again for your consideration!",
+      "firstCardThirdPara": "Please let me know if there's anything else I can help you with asap.",
+      "secondCardFirstLine": " Dear Jason, ",
+      "secondCardFirstPara": "Thank you for your interest in the ",
+      "secondCardFirstParaHighlighted1": "UI Designer position",
+      "secondCardFirstParaRemaining1": " at Tech Sol and for sharing your qualifications with us. Your ",
+      "secondCardFristParaHighlight2": " background in web design ",
+      "secondCardFirstParaRemaining2": "and user-centered approaches is impressive and aligns well with our needs.",
+      "secondCardSecondPara": "We would like to discuss your application in more detail. Could you please send over your portfolio and ",
+      "secondCardSecondParaHighlight": "a few available times for a preliminary video",
+      "secondCardSecondParaRemaining": "call next week?",
+      "secondCardThirdPara": "Looking forward to your response.",
+      "secondCardFourParaLine1": "Best regards, ",
+      "secondCardFourParaLine2": "Meziane Tech Sol HR Team"
+    },
+    "section5": {
+      "heading1": "Trusted By 15000+",
+      "heading2": "Users And Organization",
+      "para": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "card1text": "“Everything is perfect, we are very satisfied. It’s very practical and the customer service is great. We are happy to work with you”",
+      "card2text": "“Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's dummy text”"
+    },
+    "section6": {
+      "heading": "Choose A Perfect Plan To Start With",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "card1title": "BASIC",
+      "card1description": "Try out with basic feature",
+      "card1speciality": "Free",
+      "card1specialitydescription": "Includes",
+      "card1feature1": "Kanban Boards",
+      "card1feature2": "Gantt Charts",
+      "card1feature3": "Resource Allocation",
+      "card1feature4": "Calendar Integration",
+      "card1feature5": "Progress Tracking",
+      "cardbutton": "Get Started",
+      "card2title": "PREMIUM",
+      "card2description": "Try out with Premium features",
+      "card2speciality": "   /month",
+      "card2specialitydescription": "All starter features,plus:",
+      "card2feature1": "Customize Workflows",
+      "card2feature2": "Reporting and Analytics",
+      "card2feature3": "Document Management",
+      "card2feature4": "Agile Methodology Support",
+      "card2feature5": "Issue Tracking",
+      "card2top": "Most Popular",
+      "card3title": "PROFESSIONAL",
+      "card3description": "Try out with Professional features",
+      "card3speciality": " /month",
+      "card3specialitydescription": "All premium features, plus:",
+      "card3feature1": "SSO",
+      "card3feature2": "All integrations",
+      "card3feature3": "Client Collaboration with 2FA",
+      "card3feature4": "Advanced Project Planning",
+      "card3feature5": "Mobile App Integration"
+    },
+    "section7": {
+      "mainheading": "Are We A Good Fit?",
+      "description1": "We may be able to do great things together if you are working to...",
+      "feature1text": "Lorem Ipsum is simply dummy text.",
+      "feature2text": "Lorem Ipsum has been the industry's standard.",
+      "feature3text": " It was popularized in the release.",
+      "feature4text": " The point of using Lorem Ipsum is that it has."
+    },
+    "section8": {
+      "mainheading": "Do You Have Any Questions? Contact Us Now",
+      "input1": "Name",
+      "input2": "Email",
+      "input3": "Subject",
+      "input4": "Phone",
+      "input5": "Message",
+      "button": "Submit"
+    },
+    "footer": {
+      "footercol1first": "Text Inbox",
+      "footercol1para": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "footercol2first": "Follow Us"
+    }
+  },
+  "german": {
+    "heading": {
+      "name": "Texteingang"
+    },
+    "navLinks": [
+      {
+        "firstlink": "Startseite",
+        "href": "/"
+      },
+      {
+        "firstlink": "Preisgestaltung",
+        "href": "/Pricing"
+      },
+      {
+        "firstlink": "Kontakt",
+        "href": "/Contact"
+      }
+    ],
+    "navbutton": {
+      "button": "Jetzt ausprobieren"
+    },
+    "hero": {
+      "heroheading1": "Persönliche Gestaltung",
+      "heroheading2": "E-Mails, die Ihren einzigartigen Stil widerspiegeln",
+      "herodescription": "TextInbox, Ihr personalisierter KI-E-Mail-Assistent, sorgt für nahtlose E-Mail-Kommunikation!",
+      "herobutton": "Kostenlos starten"
+    },
+    "section2": {
+      "topheading": "WIE ES FUNKTIONIERT",
+      "mainheading": "So schreiben Sie eine E-Mail in drei einfachen Schritten",
+      "firstcardheading": "Geschwindigkeit",
+      "firstcarddescription": "Erzeugen Sie E-Mails schnell mit nur einem/zwei Hinweisen.",
+      "secondcardheading": "Anpassung",
+      "secondcarddescription": "Unsere Lösung verdient Ihren Schreibstil und generiert E-Mails im gleichen Stil.",
+      "thirdcardheading": "Datenschutz",
+      "thirdcarddescription": "Der Datenschutz der Benutzer hat für uns oberste Priorität. Unsere Lösung verwendet oder speichert keine Benutzerdaten. Wir verwenden nur die letzte E-Mail, um eine Antwort zu generieren.",
+      "section2button": "Kostenlos starten"
+    },
+    "section3": {
+      "mainheading": "Schreiben Sie einzigartige und professionelle E-Mails in Minuten",
+      "description": "Lorem Ipsum ist einfach dummy text der Druck- und Satzindustrie.",
+      "button": "Kostenlos installieren"
+    },
+    "section4": {
+      "mainheading": "Email Chrome wird Ihre E-Mail-Antwort entwerfen",
+      "description": "Lorem Ipsum ist einfach dummy text der Druck- und Satzindustrie.",
+      "firstcardfirstline": "Lieber Meziane, ",
+      "firstcardfirstpara": "Ich schreibe, um auszudrücken",
+      "firstCardFirstParaTextHighlighted": "mein Interesse an der UI",
+      "firstCardFirstParaTextRemaining": "Designer-Rolle bei Tech Sol. Ich habe einen B-Tech in Informatik und würde gerne mit Ihnen arbeiten.",
+      "firstCardSecondPara": "Ich kann Ihnen nicht sagen, wie sehr ich ",
+      "firstCardSecondParaTextHighlighted1": "Ihre Zeit schätze ",
+      "firstCardSecondParaTextRemaining1": "und Überlegung, aber ich möchte Ihnen einen kurzen Überblick über meine Fähigkeiten geben: ",
+      "firstCardSecondParaTextHighlighted2": "Ich bin ein Experte im Webdesign ",
+      "firstCardSecondParaTextRemaining2": "und ich habe Erfahrung in Projekten, die sich mit benutzerzentriertem Design, Benutzererfahrung, Informationsarchitektur und visuellem Design befassen.",
+      "firstCardThirdParaHighlighted": "Danke nochmal für Ihre Überlegung!",
+      "firstCardThirdPara": "Bitte lassen Sie mich wissen, ob ich Ihnen noch anderweitig behilflich sein kann.",
+      "secondCardFirstLine": " Lieber Jason, ",
+      "secondCardFirstPara": "Danke für Ihr Interesse an der ",
+      "secondCardFirstParaHighlighted1": "Position des UI-Designers",
+      "secondCardFirstParaRemaining1": " bei Tech Sol und für das Teilen Ihrer Qualifikationen mit uns. Ihr ",
+      "secondCardFristParaHighlight2": " Hintergrund im Webdesign ",
+      "secondCardFirstParaRemaining2": "und Ihre benutzerzentrierten Ansätze sind beeindruckend und stimmen gut mit unseren Bedürfnissen überein.",
+      "secondCardSecondPara": "Wir möchten Ihre Bewerbung näher besprechen. Könnten Sie bitte Ihr Portfolio und ",
+      "secondCardSecondParaHighlight": "ein paar verfügbare Zeiten für ein Vorab-Video",
+      "secondCardSecondParaRemaining": " nächste Woche senden?",
+      "secondCardThirdPara": "Wir freuen uns auf Ihre Antwort.",
+      "secondCardFourParaLine1": "Mit freundlichen Grüßen, ",
+      "secondCardFourParaLine2": "Meziane Tech Sol HR-Team"
+    },
+    "section5": {
+      "heading1": "Vertraut von 15000+",
+      "heading2": "Benutzern und Organisationen",
+      "para": "Lorem Ipsum ist einfach dummy text der Druck- und Satzindustrie.",
+      "card1text": "„Alles ist perfekt, wir sind sehr zufrieden. Es ist sehr praktisch und der Kundenservice ist großartig. Wir freuen uns, mit Ihnen zusammenzuarbeiten.“",
+      "card2text": "„Lorem Ipsum ist einfach dummy text der Druck- und Satzindustrie. Lorem Ipsum ist der Dummy-Text der Branche“"
+    },
+    "section6": {
+      "heading": "Wählen Sie einen perfekten Plan zum Einstieg",
+      "description": "Lorem Ipsum ist einfach dummy text der Druck- und Satzindustrie.",
+      "card1title": "BASIS",
+      "card1description": "Probieren Sie es mit grundlegenden Funktionen aus",
+      "card1speciality": "Kostenlos",
+      "card1specialitydescription": "Enthält",
+      "card1feature1": "Kanban-Boards",
+      "card1feature2": "Gantt-Diagramme",
+      "card1feature3": "Ressourcenzuweisung",
+      "card1feature4": "Kalenderintegration",
+      "card1feature5": "Fortschrittsverfolgung",
+      "cardbutton": "Loslegen",
+      "card2title": "PREMIUM",
+      "card2description": "Probieren Sie es mit Premium-Funktionen aus",
+      "card2speciality": "   /Monat",
+      "card2specialitydescription": "Alle Starterfunktionen, plus:",
+      "card2feature1": "Anpassen von Workflows",
+      "card2feature2": "Berichterstellung und Analyse",
+      "card2feature3": "Dokumentenverwaltung",
+      "card2feature4": "Agile-Methodik-Unterstützung",
+      "card2feature5": "Fehlerverfolgung",
+      "card2top": "Am beliebtesten",
+      "card3title": "PROFESSIONAL",
+      "card3description": "Probieren Sie es mit professionellen Funktionen aus",
+      "card3speciality": " /Monat",
+      "card3specialitydescription": "Alle Premiumfunktionen, plus:",
+      "card3feature1": "SSO",
+      "card3feature2": "Alle Integrationen",
+      "card3feature3": "Kundenzusammenarbeit mit 2FA",
+      "card3feature4": "Erweiterte Projektplanung",
+      "card3feature5": "Mobile App-Integration"
+    },
+    "section7": {
+      "mainheading": "Passen wir zusammen?",
+      "description1": "Wir können großartige Dinge zusammen tun, wenn Sie daran arbeiten...",
+      "feature1text": "Lorem Ipsum ist einfach dummy text.",
+      "feature2text": "Lorem Ipsum ist seit langem der Standard der Branche.",
+      "feature3text": " Es wurde bei der Veröffentlichung populär gemacht.",
+      "feature4text": " Der Sinn von Lorem Ipsum ist, dass er verwendet wird."
+    },
+    "section8": {
+      "mainheading": "Haben Sie Fragen? Kontaktieren Sie uns jetzt",
+      "input1": "Name",
+      "input2": "E-Mail",
+      "input3": "Betreff",
+      "input4": "Telefon",
+      "input5": "Nachricht",
+      "button": "Absenden"
+    },
+    "footer": {
+      "footercol1first": "Texteingang",
+      "footercol1para": "Lorem Ipsum ist einfach dummy text der Druck- und Satzindustrie.",
+      "footercol2first": "Folgen Sie uns"
+    }
+  }
+}
