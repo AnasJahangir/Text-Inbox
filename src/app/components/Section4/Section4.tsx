@@ -185,7 +185,7 @@ const Section4 = () => {
             alt="section4"
             height={100}
             width={100}
-            className="absolute and top-0 left-[44%] md:block hidden"
+            className="absolute and transform rotate-45 md:rotate-0  top-[45%] left-[5%] md:left-[44%] md:top-0 "
           />
         </div>
       </div>

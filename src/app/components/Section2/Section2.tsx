@@ -120,7 +120,7 @@ const Feature = () => {
         <div className="w-[70%] md:w-[85%] mt-[5rem] md:mt-[3rem] mb-[3rem] mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[3rem]">
           {/* 1st card */}
           <div>
-            <div className="p-2 pb-[5rem] hover:bg-white rounded-lg hover:shadow-md transition-all">
+            <div className="p-2 pb-[5rem] hover:bg-white rounded-lg hover:shadow-2xl transition-all">
               {/* Background Container */}
               <div className="bg-[#0ECFC6] bg-opacity-20 w-[20%] h-[40px] flex items-center justify-center mx-auto rounded-xl">
                 {/* Inner Text */}
@@ -170,7 +170,7 @@ const Feature = () => {
 
           {/* 3rd card */}
           <div>
-            <div className="p-6 hover:bg-white rounded-lg hover:shadow-md transition-all">
+            <div className="p-6 hover:bg-white rounded-lg hover:shadow-2xl transition-all">
               {/* Background Container */}
               <div className="bg-[#0ECFC6] bg-opacity-20 w-[20%] h-[40px] flex items-center justify-center mx-auto rounded-xl">
                 {/* Inner Text */}
