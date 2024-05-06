@@ -1,11 +1,61 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import section6 from "../../app/data.json";
 import Image from "next/image";
 import { useLanguage } from "@/config/context/LanguageContext";
 
 const Section6 = () => {
   const { language } = useLanguage();
+  const [basic, setBasic] = useState(true);
+  const [pre, setPre] = useState(true);
+  const [pro, setPro] = useState(true);
+
+  const checkOut = async (subs: string) => {
+    if (subs === "BASIC") {
+      setBasic(false);
+    }
+    if (subs === "PRE") {
+      setPre(false);
+    }
+    if (subs === "PRO") {
+      setPro(false);
+    }
+    fetch(
+      `https://hybjk3i3z6.execute-api.eu-central-1.amazonaws.com/subscription/checkout?plan=${subs}&email=user@example.com`,
+      {
+        method: "GET",
+        headers: {
+          "x-api-key": "k0JA~3JfM.IEgmtaR6bzGjiZvGtzH2RC",
+        },
+      }
+    )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data.url);
+        window.open(data.url, "_blank");
+
+        if (subs === "BASIC") {
+          setBasic(true);
+        }
+        if (subs === "PRE") {
+          setPre(true);
+        }
+        if (subs === "PRO") {
+          setPro(true);
+        }
+      })
+      .catch((error) => {
+        console.error("There was a problem with the fetch operation:", error);
+        setPro(true);
+        setPre(true);
+        setBasic(true);
+      });
+  };
 
   return (
     <div className="mt-[5rem] mb-[3rem]" id="Section6">
@@ -123,10 +173,54 @@ const Section6 = () => {
               </div>
             </div>
           </div>
-          <button className="w-full outline hover:bg-[#0AAFA6] outline-1 py-[0.35rem] mb-0 outline-[#0ECFC6] rounded-full">
-            {language
-              ? section6.german.section6.cardbutton
-              : section6.english.section6.cardbutton}
+
+          <button
+            onClick={() => checkOut("BASIC")}
+            className="w-full outline hover:bg-[#0AAFA6] outline-1 py-[0.35rem] mb-0 outline-[#0ECFC6] rounded-full"
+          >
+            {language ? (
+              basic === false ? (
+                <svg
+                  aria-hidden="true"
+                  role="status"
+                  className="inline w-4 h-4 me-3 text-white animate-spin"
+                  viewBox="0 0 100 101"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                    fill="#E5E7EB"
+                  />
+                  <path
+                    d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              ) : (
+                section6.german.section6.cardbutton
+              )
+            ) : basic === false ? (
+              <svg
+                aria-hidden="true"
+                role="status"
+                className="inline w-4 h-4 me-3 text-white animate-spin"
+                viewBox="0 0 100 101"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                  fill="#E5E7EB"
+                />
+                <path
+                  d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                  fill="currentColor"
+                />
+              </svg>
+            ) : (
+              section6.english.section6.cardbutton
+            )}
           </button>
         </div>
 
@@ -239,10 +333,53 @@ const Section6 = () => {
                 </div>
               </div>
             </div>
-            <button className="w-[80%] mx-auto ml-6 hover:bg-[#0AAFA6]  py-[0.35rem] mb-12 bg-[#0ECFC6] rounded-full">
-              {language
-                ? section6.german.section6.cardbutton
-                : section6.english.section6.cardbutton}
+            <button
+              onClick={() => checkOut("PRE")}
+              className="w-[80%] mx-auto ml-6 hover:bg-[#0AAFA6]  py-[0.35rem] mb-12 bg-[#0ECFC6] rounded-full"
+            >
+              {language ? (
+                pre === false ? (
+                  <svg
+                    aria-hidden="true"
+                    role="status"
+                    className="inline w-4 h-4 me-3 text-white animate-spin"
+                    viewBox="0 0 100 101"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                      fill="#E5E7EB"
+                    />
+                    <path
+                      d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                ) : (
+                  section6.german.section6.cardbutton
+                )
+              ) : pre === false ? (
+                <svg
+                  aria-hidden="true"
+                  role="status"
+                  className="inline w-4 h-4 me-3 text-white animate-spin"
+                  viewBox="0 0 100 101"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                    fill="#E5E7EB"
+                  />
+                  <path
+                    d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              ) : (
+                section6.english.section6.cardbutton
+              )}
             </button>
           </div>
         </div>
@@ -347,10 +484,53 @@ const Section6 = () => {
               </div>
             </div>
           </div>
-          <button className="w-full outline outline-1 py-[0.35rem] hover:bg-[#0AAFA6] mb-4 outline-[#0ECFC6] rounded-full">
-            {language
-              ? section6.german.section6.cardbutton
-              : section6.english.section6.cardbutton}
+          <button
+            onClick={() => checkOut("PRO")}
+            className="w-full outline outline-1 py-[0.35rem] hover:bg-[#0AAFA6] mb-4 outline-[#0ECFC6] rounded-full"
+          >
+            {language ? (
+              pro === false ? (
+                <svg
+                  aria-hidden="true"
+                  role="status"
+                  className="inline w-4 h-4 me-3 text-white animate-spin"
+                  viewBox="0 0 100 101"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                    fill="#E5E7EB"
+                  />
+                  <path
+                    d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              ) : (
+                section6.german.section6.cardbutton
+              )
+            ) : pro === false ? (
+              <svg
+                aria-hidden="true"
+                role="status"
+                className="inline w-4 h-4 me-3 text-white animate-spin"
+                viewBox="0 0 100 101"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                  fill="#E5E7EB"
+                />
+                <path
+                  d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                  fill="currentColor"
+                />
+              </svg>
+            ) : (
+              section6.english.section6.cardbutton
+            )}
           </button>
         </div>
       </div>
