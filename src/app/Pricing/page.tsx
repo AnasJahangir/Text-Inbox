@@ -84,7 +84,7 @@ const Section6 = () => {
   };
 
   return (
-    <Suspense>
+    <Suspense fallback={<Laoder />}>
       <div className="mt-[5rem] mb-[3rem]" id="Section6">
         <div className="text-center ">
           <h1 className="md:text-[40px] font-[700] mx-6 text-[30px] md:mx-[11rem] lg:mx-[24rem] text-[#004D4A]">
