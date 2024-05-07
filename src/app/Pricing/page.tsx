@@ -14,7 +14,7 @@ const Section6 = () => {
   const email = sParams.get("email");
 
   const checkOut = async (subs: string) => {
-    if (subs === "FREE") {
+    if (subs === "PRO") {
       setBasic(false);
     }
     if (subs === "ELITE") {
@@ -41,7 +41,7 @@ const Section6 = () => {
       .then((data) => {
         window.open(data.url, "_blank");
 
-        if (subs === "FREE") {
+        if (subs === "PRO") {
           setBasic(true);
         }
         if (subs === "ELITE") {
@@ -177,7 +177,7 @@ const Section6 = () => {
           </div>
 
           <button
-            onClick={() => checkOut("FREE")}
+            onClick={() => checkOut("PRO")}
             className="w-full outline hover:bg-[#0AAFA6] outline-1 py-[0.35rem] mb-0 outline-[#0ECFC6] rounded-full"
           >
             {language ? (
