@@ -1,5 +1,5 @@
 "use client";
-import React, { Suspense, useState } from "react";
+import React, { useState } from "react";
 import section6 from "../../app/data.json";
 import Image from "next/image";
 import { useLanguage } from "@/config/context/LanguageContext";
@@ -84,48 +84,175 @@ const Section6 = () => {
   };
 
   return (
-    <Suspense fallback={<Laoder />}>
-      <div className="mt-[5rem] mb-[3rem]" id="Section6">
-        <div className="text-center ">
-          <h1 className="md:text-[40px] font-[700] mx-6 text-[30px] md:mx-[11rem] lg:mx-[24rem] text-[#004D4A]">
-            {language
-              ? section6.german.section6.heading
-              : section6.english.section6.heading}
-          </h1>
-          <p className="text-[20px] font-sans mt-12 md:mt-5 px-4">
-            {language
-              ? section6.german.section6.description
-              : section6.english.section6.description}
-          </p>
-        </div>
-        {/* cards */}
+    <div className="mt-[5rem] mb-[3rem]" id="Section6">
+      <div className="text-center ">
+        <h1 className="md:text-[40px] font-[700] mx-6 text-[30px] md:mx-[11rem] lg:mx-[24rem] text-[#004D4A]">
+          {language
+            ? section6.german.section6.heading
+            : section6.english.section6.heading}
+        </h1>
+        <p className="text-[20px] font-sans mt-12 md:mt-5 px-4">
+          {language
+            ? section6.german.section6.description
+            : section6.english.section6.description}
+        </p>
+      </div>
+      {/* cards */}
 
-        <div className="w-[80%] md:w-[80%] mt-[5rem] md:mt-[3rem] mb-[3rem] mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[3rem] relative">
-          {/* 1st card */}
-          <div className="p-2 px-6 rounded-lg border-gray-200  border-3 border transition-all ">
-            <div className=" pb-[5rem] ">
+      <div className="w-[80%] md:w-[80%] mt-[5rem] md:mt-[3rem] mb-[3rem] mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[3rem] relative">
+        {/* 1st card */}
+        <div className="p-2 px-6 rounded-lg border-gray-200  border-3 border transition-all ">
+          <div className=" pb-[5rem] ">
+            <h1 className=" text-[20px] font-bold pt-2">
+              {language
+                ? section6.german.section6.card1title
+                : section6.english.section6.card1title}
+            </h1>
+            <p className="text-[16px] font-sans mt-[0.15rem]">
+              {language
+                ? section6.german.section6.card1description
+                : section6.english.section6.card1description}
+            </p>
+
+            <div className="pt-5 ">
+              <h3 className="text-[#004D4A] text-[32px] font-[700] ">
+                {language
+                  ? section6.german.section6.card1speciality
+                  : section6.english.section6.card1speciality}
+              </h3>
+              <div className="font-sans pt-4">
+                <p>
+                  {language
+                    ? section6.german.section6.card1specialitydescription
+                    : section6.english.section6.card1specialitydescription}
+                </p>
+                <div className="flex pt-2 text-[14px]  gap-3 mt-2 items-center">
+                  <Image
+                    src={"/images/checkmark.png"}
+                    alt="checkmark"
+                    width={200}
+                    height={200}
+                    className="w-[20px]"
+                  />
+                  <p>
+                    {language
+                      ? section6.german.section6.card1feature1
+                      : section6.english.section6.card1feature1}
+                  </p>
+                </div>
+                <div className="flex pt-2 text-[14px]  gap-3 mt-2 items-center">
+                  <Image
+                    src={"/images/checkmark.png"}
+                    alt="checkmark"
+                    width={200}
+                    height={200}
+                    className="w-[20px]"
+                  />
+                  <p>
+                    {language
+                      ? section6.german.section6.card1feature2
+                      : section6.english.section6.card1feature2}
+                  </p>
+                </div>
+                <div className="flex pt-2 text-[14px]  gap-3 mt-2 items-center">
+                  <Image
+                    src={"/images/checkmark.png"}
+                    alt="checkmark"
+                    width={200}
+                    height={200}
+                    className="w-[20px]"
+                  />
+                  <p>
+                    {language
+                      ? section6.german.section6.card1feature3
+                      : section6.english.section6.card1feature3}
+                  </p>
+                </div>
+                <div className="flex pt-2 text-[14px]  gap-3 mt-2 items-center">
+                  <Image
+                    src={"/images/checkmark.png"}
+                    alt="checkmark"
+                    width={200}
+                    height={200}
+                    className="w-[20px]"
+                  />
+                  <p>
+                    {language
+                      ? section6.german.section6.card1feature4
+                      : section6.english.section6.card1feature4}
+                  </p>
+                </div>
+                <div className="flex pt-2 text-[14px]  gap-3 mt-2 items-center">
+                  <Image
+                    src={"/images/checkmark.png"}
+                    alt="checkmark"
+                    width={200}
+                    height={200}
+                    className="w-[20px]"
+                  />
+                  <p>
+                    {language
+                      ? section6.german.section6.card1feature5
+                      : section6.english.section6.card1feature5}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            onClick={() => checkOut("PRO")}
+            className="w-full outline hover:bg-[#0AAFA6] outline-1 py-[0.35rem] mb-0 outline-[#0ECFC6] rounded-full"
+          >
+            {language ? (
+              basic === false ? (
+                <Laoder />
+              ) : (
+                section6.german.section6.cardbutton
+              )
+            ) : basic === false ? (
+              <Laoder />
+            ) : (
+              section6.english.section6.cardbutton
+            )}
+          </button>
+        </div>
+
+        {/* 2nd card */}
+        <div className="rounded-lg border-[#0ECFC6]  border-[0.20rem]">
+          <div>
+            <p className="bg-[#0ECFC6] text-center font-sans">
+              {language
+                ? section6.german.section6.card2top
+                : section6.english.section6.card2top}
+            </p>
+          </div>
+
+          <div className="  transition-all">
+            <div className="px-6 p-2  pb-[5rem] ">
               <h1 className=" text-[20px] font-bold pt-2">
                 {language
-                  ? section6.german.section6.card1title
-                  : section6.english.section6.card1title}
+                  ? section6.german.section6.card2title
+                  : section6.english.section6.card2title}
               </h1>
               <p className="text-[16px] font-sans mt-[0.15rem]">
                 {language
-                  ? section6.german.section6.card1description
-                  : section6.english.section6.card1description}
+                  ? section6.german.section6.card2description
+                  : section6.english.section6.card2description}
               </p>
 
               <div className="pt-5 ">
-                <h3 className="text-[#004D4A] text-[32px] font-[700] ">
+                <h3 className="text-[#004D4A] ">
+                  <span className="text-[32px] font-[700]">$50 </span>{" "}
                   {language
-                    ? section6.german.section6.card1speciality
-                    : section6.english.section6.card1speciality}
+                    ? section6.german.section6.card2speciality
+                    : section6.english.section6.card2speciality}
                 </h3>
                 <div className="font-sans pt-4">
                   <p>
                     {language
-                      ? section6.german.section6.card1specialitydescription
-                      : section6.english.section6.card1specialitydescription}
+                      ? section6.german.section6.card2specialitydescription
+                      : section6.english.section6.card2specialitydescription}
                   </p>
                   <div className="flex pt-2 text-[14px]  gap-3 mt-2 items-center">
                     <Image
@@ -137,8 +264,8 @@ const Section6 = () => {
                     />
                     <p>
                       {language
-                        ? section6.german.section6.card1feature1
-                        : section6.english.section6.card1feature1}
+                        ? section6.german.section6.card2feature1
+                        : section6.english.section6.card2feature1}
                     </p>
                   </div>
                   <div className="flex pt-2 text-[14px]  gap-3 mt-2 items-center">
@@ -151,8 +278,8 @@ const Section6 = () => {
                     />
                     <p>
                       {language
-                        ? section6.german.section6.card1feature2
-                        : section6.english.section6.card1feature2}
+                        ? section6.german.section6.card2feature2
+                        : section6.english.section6.card2feature2}
                     </p>
                   </div>
                   <div className="flex pt-2 text-[14px]  gap-3 mt-2 items-center">
@@ -165,8 +292,8 @@ const Section6 = () => {
                     />
                     <p>
                       {language
-                        ? section6.german.section6.card1feature3
-                        : section6.english.section6.card1feature3}
+                        ? section6.german.section6.card2feature3
+                        : section6.english.section6.card2feature3}
                     </p>
                   </div>
                   <div className="flex pt-2 text-[14px]  gap-3 mt-2 items-center">
@@ -179,8 +306,8 @@ const Section6 = () => {
                     />
                     <p>
                       {language
-                        ? section6.german.section6.card1feature4
-                        : section6.english.section6.card1feature4}
+                        ? section6.german.section6.card2feature4
+                        : section6.english.section6.card2feature4}
                     </p>
                   </div>
                   <div className="flex pt-2 text-[14px]  gap-3 mt-2 items-center">
@@ -193,271 +320,24 @@ const Section6 = () => {
                     />
                     <p>
                       {language
-                        ? section6.german.section6.card1feature5
-                        : section6.english.section6.card1feature5}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <button
-              onClick={() => checkOut("PRO")}
-              className="w-full outline hover:bg-[#0AAFA6] outline-1 py-[0.35rem] mb-0 outline-[#0ECFC6] rounded-full"
-            >
-              {language ? (
-                basic === false ? (
-                  <Laoder />
-                ) : (
-                  section6.german.section6.cardbutton
-                )
-              ) : basic === false ? (
-                <Laoder />
-              ) : (
-                section6.english.section6.cardbutton
-              )}
-            </button>
-          </div>
-
-          {/* 2nd card */}
-          <div className="rounded-lg border-[#0ECFC6]  border-[0.20rem]">
-            <div>
-              <p className="bg-[#0ECFC6] text-center font-sans">
-                {language
-                  ? section6.german.section6.card2top
-                  : section6.english.section6.card2top}
-              </p>
-            </div>
-
-            <div className="  transition-all">
-              <div className="px-6 p-2  pb-[5rem] ">
-                <h1 className=" text-[20px] font-bold pt-2">
-                  {language
-                    ? section6.german.section6.card2title
-                    : section6.english.section6.card2title}
-                </h1>
-                <p className="text-[16px] font-sans mt-[0.15rem]">
-                  {language
-                    ? section6.german.section6.card2description
-                    : section6.english.section6.card2description}
-                </p>
-
-                <div className="pt-5 ">
-                  <h3 className="text-[#004D4A] ">
-                    <span className="text-[32px] font-[700]">$50 </span>{" "}
-                    {language
-                      ? section6.german.section6.card2speciality
-                      : section6.english.section6.card2speciality}
-                  </h3>
-                  <div className="font-sans pt-4">
-                    <p>
-                      {language
-                        ? section6.german.section6.card2specialitydescription
-                        : section6.english.section6.card2specialitydescription}
-                    </p>
-                    <div className="flex pt-2 text-[14px]  gap-3 mt-2 items-center">
-                      <Image
-                        src={"/images/checkmark.png"}
-                        alt="checkmark"
-                        width={200}
-                        height={200}
-                        className="w-[20px]"
-                      />
-                      <p>
-                        {language
-                          ? section6.german.section6.card2feature1
-                          : section6.english.section6.card2feature1}
-                      </p>
-                    </div>
-                    <div className="flex pt-2 text-[14px]  gap-3 mt-2 items-center">
-                      <Image
-                        src={"/images/checkmark.png"}
-                        alt="checkmark"
-                        width={200}
-                        height={200}
-                        className="w-[20px]"
-                      />
-                      <p>
-                        {language
-                          ? section6.german.section6.card2feature2
-                          : section6.english.section6.card2feature2}
-                      </p>
-                    </div>
-                    <div className="flex pt-2 text-[14px]  gap-3 mt-2 items-center">
-                      <Image
-                        src={"/images/checkmark.png"}
-                        alt="checkmark"
-                        width={200}
-                        height={200}
-                        className="w-[20px]"
-                      />
-                      <p>
-                        {language
-                          ? section6.german.section6.card2feature3
-                          : section6.english.section6.card2feature3}
-                      </p>
-                    </div>
-                    <div className="flex pt-2 text-[14px]  gap-3 mt-2 items-center">
-                      <Image
-                        src={"/images/checkmark.png"}
-                        alt="checkmark"
-                        width={200}
-                        height={200}
-                        className="w-[20px]"
-                      />
-                      <p>
-                        {language
-                          ? section6.german.section6.card2feature4
-                          : section6.english.section6.card2feature4}
-                      </p>
-                    </div>
-                    <div className="flex pt-2 text-[14px]  gap-3 mt-2 items-center">
-                      <Image
-                        src={"/images/checkmark.png"}
-                        alt="checkmark"
-                        width={200}
-                        height={200}
-                        className="w-[20px]"
-                      />
-                      <p>
-                        {language
-                          ? section6.german.section6.card2feature5
-                          : section6.english.section6.card2feature5}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button
-                onClick={() => checkOut("ELITE")}
-                className="w-[80%] mx-auto ml-6 hover:bg-[#0AAFA6]  py-[0.35rem] mb-12 bg-[#0ECFC6] rounded-full"
-              >
-                {language ? (
-                  pre === false ? (
-                    <Laoder />
-                  ) : (
-                    section6.german.section6.cardbutton
-                  )
-                ) : pre === false ? (
-                  <Laoder />
-                ) : (
-                  section6.english.section6.cardbutton
-                )}
-              </button>
-            </div>
-          </div>
-
-          {/* 3rd card */}
-          <div className="p-2 px-6 rounded-lg  border-gray-200 border-3 border transition-all">
-            <div className=" pb-[5rem] ">
-              <h1 className=" text-[20px] font-bold pt-2">
-                {language
-                  ? section6.german.section6.card3title
-                  : section6.english.section6.card3title}
-              </h1>
-              <p className="text-[16px] font-sans mt-[0.15rem]">
-                {language
-                  ? section6.german.section6.card3description
-                  : section6.english.section6.card3description}
-              </p>
-
-              <div className="pt-4 ">
-                <h3 className="text-[#004D4A]  ">
-                  <span className="text-[32px] font-[700]">$100</span>
-                  {language
-                    ? section6.german.section6.card3speciality
-                    : section6.english.section6.card3speciality}
-                </h3>
-                <div className="font-sans pt-3">
-                  <p>
-                    {language
-                      ? section6.german.section6.card3specialitydescription
-                      : section6.english.section6.card3specialitydescription}
-                  </p>
-                  <div className="flex pt-2 text-[14px]  gap-3 mt-2 items-center">
-                    <Image
-                      src={"/images/checkmark.png"}
-                      alt="checkmark"
-                      width={200}
-                      height={200}
-                      className="w-[20px]"
-                    />
-                    <p>
-                      {language
-                        ? section6.german.section6.card3feature1
-                        : section6.english.section6.card3feature1}
-                    </p>
-                  </div>
-                  <div className="flex pt-2 text-[14px]  gap-3 mt-2 items-center">
-                    <Image
-                      src={"/images/checkmark.png"}
-                      alt="checkmark"
-                      width={200}
-                      height={200}
-                      className="w-[20px]"
-                    />
-                    <p>
-                      {language
-                        ? section6.german.section6.card3feature2
-                        : section6.english.section6.card3feature2}
-                    </p>
-                  </div>
-                  <div className="flex pt-2 text-[14px]  gap-3 mt-2 items-center">
-                    <Image
-                      src={"/images/checkmark.png"}
-                      alt="checkmark"
-                      width={200}
-                      height={200}
-                      className="w-[20px]"
-                    />
-                    <p>
-                      {language
-                        ? section6.german.section6.card3feature3
-                        : section6.english.section6.card3feature3}
-                    </p>
-                  </div>
-                  <div className="flex pt-2 text-[14px]  gap-3 mt-2 items-center">
-                    <Image
-                      src={"/images/checkmark.png"}
-                      alt="checkmark"
-                      width={200}
-                      height={200}
-                      className="w-[20px]"
-                    />
-                    <p>
-                      {language
-                        ? section6.german.section6.card3feature4
-                        : section6.english.section6.card3feature4}
-                    </p>
-                  </div>
-                  <div className="flex pt-2 text-[14px]  gap-3 mt-2 items-center">
-                    <Image
-                      src={"/images/checkmark.png"}
-                      alt="checkmark"
-                      width={200}
-                      height={200}
-                      className="w-[20px]"
-                    />
-                    <p>
-                      {language
-                        ? section6.german.section6.card3feature5
-                        : section6.english.section6.card3feature5}
+                        ? section6.german.section6.card2feature5
+                        : section6.english.section6.card2feature5}
                     </p>
                   </div>
                 </div>
               </div>
             </div>
             <button
-              onClick={() => checkOut("PRO")}
-              className="w-full outline outline-1 py-[0.35rem] hover:bg-[#0AAFA6] mb-4 outline-[#0ECFC6] rounded-full"
+              onClick={() => checkOut("ELITE")}
+              className="w-[80%] mx-auto ml-6 hover:bg-[#0AAFA6]  py-[0.35rem] mb-12 bg-[#0ECFC6] rounded-full"
             >
               {language ? (
-                pro === false ? (
+                pre === false ? (
                   <Laoder />
                 ) : (
                   section6.german.section6.cardbutton
                 )
-              ) : pro === false ? (
+              ) : pre === false ? (
                 <Laoder />
               ) : (
                 section6.english.section6.cardbutton
@@ -465,8 +345,126 @@ const Section6 = () => {
             </button>
           </div>
         </div>
+
+        {/* 3rd card */}
+        <div className="p-2 px-6 rounded-lg  border-gray-200 border-3 border transition-all">
+          <div className=" pb-[5rem] ">
+            <h1 className=" text-[20px] font-bold pt-2">
+              {language
+                ? section6.german.section6.card3title
+                : section6.english.section6.card3title}
+            </h1>
+            <p className="text-[16px] font-sans mt-[0.15rem]">
+              {language
+                ? section6.german.section6.card3description
+                : section6.english.section6.card3description}
+            </p>
+
+            <div className="pt-4 ">
+              <h3 className="text-[#004D4A]  ">
+                <span className="text-[32px] font-[700]">$100</span>
+                {language
+                  ? section6.german.section6.card3speciality
+                  : section6.english.section6.card3speciality}
+              </h3>
+              <div className="font-sans pt-3">
+                <p>
+                  {language
+                    ? section6.german.section6.card3specialitydescription
+                    : section6.english.section6.card3specialitydescription}
+                </p>
+                <div className="flex pt-2 text-[14px]  gap-3 mt-2 items-center">
+                  <Image
+                    src={"/images/checkmark.png"}
+                    alt="checkmark"
+                    width={200}
+                    height={200}
+                    className="w-[20px]"
+                  />
+                  <p>
+                    {language
+                      ? section6.german.section6.card3feature1
+                      : section6.english.section6.card3feature1}
+                  </p>
+                </div>
+                <div className="flex pt-2 text-[14px]  gap-3 mt-2 items-center">
+                  <Image
+                    src={"/images/checkmark.png"}
+                    alt="checkmark"
+                    width={200}
+                    height={200}
+                    className="w-[20px]"
+                  />
+                  <p>
+                    {language
+                      ? section6.german.section6.card3feature2
+                      : section6.english.section6.card3feature2}
+                  </p>
+                </div>
+                <div className="flex pt-2 text-[14px]  gap-3 mt-2 items-center">
+                  <Image
+                    src={"/images/checkmark.png"}
+                    alt="checkmark"
+                    width={200}
+                    height={200}
+                    className="w-[20px]"
+                  />
+                  <p>
+                    {language
+                      ? section6.german.section6.card3feature3
+                      : section6.english.section6.card3feature3}
+                  </p>
+                </div>
+                <div className="flex pt-2 text-[14px]  gap-3 mt-2 items-center">
+                  <Image
+                    src={"/images/checkmark.png"}
+                    alt="checkmark"
+                    width={200}
+                    height={200}
+                    className="w-[20px]"
+                  />
+                  <p>
+                    {language
+                      ? section6.german.section6.card3feature4
+                      : section6.english.section6.card3feature4}
+                  </p>
+                </div>
+                <div className="flex pt-2 text-[14px]  gap-3 mt-2 items-center">
+                  <Image
+                    src={"/images/checkmark.png"}
+                    alt="checkmark"
+                    width={200}
+                    height={200}
+                    className="w-[20px]"
+                  />
+                  <p>
+                    {language
+                      ? section6.german.section6.card3feature5
+                      : section6.english.section6.card3feature5}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            onClick={() => checkOut("PRO")}
+            className="w-full outline outline-1 py-[0.35rem] hover:bg-[#0AAFA6] mb-4 outline-[#0ECFC6] rounded-full"
+          >
+            {language ? (
+              pro === false ? (
+                <Laoder />
+              ) : (
+                section6.german.section6.cardbutton
+              )
+            ) : pro === false ? (
+              <Laoder />
+            ) : (
+              section6.english.section6.cardbutton
+            )}
+          </button>
+        </div>
       </div>
-    </Suspense>
+    </div>
   );
 };
 
