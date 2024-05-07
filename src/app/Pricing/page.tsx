@@ -3,25 +3,28 @@ import React, { useState } from "react";
 import section6 from "../../app/data.json";
 import Image from "next/image";
 import { useLanguage } from "@/config/context/LanguageContext";
+import { useSearchParams } from "next/navigation";
 
 const Section6 = () => {
   const { language } = useLanguage();
   const [basic, setBasic] = useState(true);
   const [pre, setPre] = useState(true);
   const [pro, setPro] = useState(true);
+  const sParams = useSearchParams();
+  const email = sParams.get("email");
 
   const checkOut = async (subs: string) => {
-    if (subs === "BASIC") {
+    if (subs === "FREE") {
       setBasic(false);
     }
-    if (subs === "PRE") {
+    if (subs === "ELITE") {
       setPre(false);
     }
     if (subs === "PRO") {
       setPro(false);
     }
     fetch(
-      `https://hybjk3i3z6.execute-api.eu-central-1.amazonaws.com/subscription/checkout?plan=${subs}&email=user@example.com`,
+      `https://hybjk3i3z6.execute-api.eu-central-1.amazonaws.com/subscription/checkout?plan=${subs}&email=${email}`,
       {
         method: "GET",
         headers: {
@@ -36,13 +39,12 @@ const Section6 = () => {
         return response.json();
       })
       .then((data) => {
-        console.log(data.url);
         window.open(data.url, "_blank");
 
-        if (subs === "BASIC") {
+        if (subs === "FREE") {
           setBasic(true);
         }
-        if (subs === "PRE") {
+        if (subs === "ELITE") {
           setPre(true);
         }
         if (subs === "PRO") {
@@ -175,7 +177,7 @@ const Section6 = () => {
           </div>
 
           <button
-            onClick={() => checkOut("BASIC")}
+            onClick={() => checkOut("FREE")}
             className="w-full outline hover:bg-[#0AAFA6] outline-1 py-[0.35rem] mb-0 outline-[#0ECFC6] rounded-full"
           >
             {language ? (
@@ -334,7 +336,7 @@ const Section6 = () => {
               </div>
             </div>
             <button
-              onClick={() => checkOut("PRE")}
+              onClick={() => checkOut("ELITE")}
               className="w-[80%] mx-auto ml-6 hover:bg-[#0AAFA6]  py-[0.35rem] mb-12 bg-[#0ECFC6] rounded-full"
             >
               {language ? (
